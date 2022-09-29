@@ -14,10 +14,12 @@ function Introduction() {
         <h3>6th Annual Region One Cybersecurity Summit</h3>
         <p>Topics we will be covering</p>
         <ul>
-          <li>The history of HTML for links and how we have evolved.</li>
-          <li>The different methods of setting up emails PROS and CONS.</li>
+          <li>The history of HTML for links and how it have evolved.</li>
+          <li>
+            The different methods of setting up emails along with PROS and CONS.
+          </li>
           <li>What I personally prefer to set up and why?</li>
-          <li>How we will eventually phase out this method I choose.</li>
+          <li>How we will eventually phase out of the recommended method.</li>
           <li>Questions?</li>
         </ul>
       </header>
