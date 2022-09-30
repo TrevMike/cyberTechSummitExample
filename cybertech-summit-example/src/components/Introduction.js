@@ -8,7 +8,7 @@ function Introduction() {
     alignItems: "center",
   };
   return (
-    <div className="introduction">
+    <div className="introduction box">
       <header style={headerStyle}>
         <h1>Welcome to Cybersecurity Summit 2022</h1>
         <h3>6th Annual Region One Cybersecurity Summit</h3>

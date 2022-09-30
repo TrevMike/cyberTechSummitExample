@@ -1,0 +1,17 @@
+// fonts
+.h1FontSize(@size) {
+  font-size: @size;
+}
+
+.shadeTopToBottom(@color1, @color2, @size) {
+  background: radial-gradient(
+      farthest-corner at top left,
+      @color1,
+      transparent @size
+    ),
+    radial-gradient(farthest-corner at top right, @color1, transparent @size),
+    radial-gradient(farthest-side at top center, @color1, transparent @size),
+    radial-gradient(farthest-corner at bottom left, @color2, transparent @size),
+    radial-gradient(farthest-side at bottom center, @color2, transparent @size),
+    radial-gradient(farthest-corner at bottom right, @color2, transparent @size);
+}

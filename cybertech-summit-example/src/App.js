@@ -1,6 +1,6 @@
 import React from "react";
 import Introduction from "./components/Introduction";
-import EmailExample from "./components/EmailExample";
+// import EmailExample from "./components/EmailExample";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 // import homePage1 from "./assets/homePage1.jpg";
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Introduction />
-      <EmailExample />
+      {/* <EmailExample /> */}
       <Footer />
     </div>
   );
