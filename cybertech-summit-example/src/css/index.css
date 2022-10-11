@@ -159,13 +159,14 @@ Chesnut: #9C3D2E rgba(156, 61, 46,1)
 Rich Black FOGRA 39: #040B0D rgba(4, 11, 13,1)
 */
 body {
-  background: #eff2d9;
+  background: #040b0d;
 }
 * {
   color: #eff2d9;
 }
 .App {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   width: 100vw;
@@ -174,18 +175,128 @@ body {
 h1 {
   width: 100%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-family: "Questrial", sans-serif;
 }
-.NavBar {
+h3 {
+  font-family: "Arapey", serif;
+}
+div,
+p,
+span,
+input {
+  font-size: 1.1rem;
+  font-family: "Questrial", sans-serif;
+}
+a {
+  font-size: 0.9rem;
+}
+.bodoni {
+  font-family: "Arapey", serif;
+}
+.garamond {
+  font-family: "Cormorant Garamond", serif;
+}
+.navBar {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   background: #040b0d;
+  padding: 20px 0px;
+}
+.navBar nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 0px 20px 0px;
+  border-bottom: solid #0b3142 2px;
+}
+.navBar nav a {
+  width: 10%;
+  text-align: center;
+  padding: 5px 0px;
 }
 .introduction {
   background: #040b0d;
-  width: 80%;
-  height: 100vh;
+  width: 50%;
+  height: auto;
   font-family: "Questrial", sans-serif;
+  background: #9c3d2e;
+  border-radius: 8px;
+  padding: 20px 0px;
+}
+.emailExample1 {
+  width: 60%;
+}
+.emailExample1 h3 {
+  font-size: 2.4rem;
+  border-bottom: solid #0fa3b1 2px;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+.emailExample1 p {
+  padding: 10px 0px;
+}
+.emailExample1 a {
+  font-size: 1.1rem;
+  padding: 5px 0px;
+  color: #9c3d2e;
+}
+.emailExample1 a:hover {
+  color: #0fa3b1;
+}
+.emailExample2 {
+  width: 60%;
+}
+.emailExample2 h3 {
+  font-size: 2.4rem;
+  border-bottom: solid #0fa3b1 2px;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+.emailExample2 p {
+  padding: 10px 0px;
+}
+.emailExample2 p span {
+  color: #0fa3b1;
+}
+.emailExample3 {
+  width: 60%;
+}
+.emailExample3 h3 {
+  font-size: 2.4rem;
+  border-bottom: solid #0fa3b1 2px;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+.emailExample3 p {
+  padding: 10px 0px;
+}
+.emailExample3 a {
+  font-size: 1.1rem;
+  padding: 5px 0px;
+  color: #9c3d2e;
+}
+.emailExample3 a button {
+  color: #0b3142;
+}
+.emailExample3 a :hover {
+  background: #9c3d2e;
+  color: #eff2d9;
+}
+.emailExample3 a:hover {
+  color: #0fa3b1;
+}
+.emailExample4 {
+  width: 60%;
+}
+.emailExample4 h3 {
+  font-size: 2.4rem;
+  border-bottom: solid #0fa3b1 2px;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+.emailExample4 p {
+  padding: 10px 0px;
 }

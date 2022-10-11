@@ -1,5 +1,5 @@
 body {
-  background: @white;
+  background: @dominateColor;
 
   // width: 100%;
 }
@@ -10,7 +10,7 @@ body {
   // .shadeTopToBottom( @white, @white,100%);
   // background-repeat: no-repeat;
   display: flex;
-  // justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   width: 100vw;
@@ -28,6 +28,7 @@ h2 {
 }
 h3 {
   // font size
+  font-family: @bodoni;
 }
 
 div,
@@ -35,4 +36,18 @@ p,
 span,
 input {
   // font size
+  font-size: @RegularSize;
+  font-family: @futura;
+}
+a {
+  font-size: @SmallSize;
+}
+.bodoni {
+  font-family: @bodoni;
+}
+// .futura {
+//   font-family: @futura;
+// }
+.garamond {
+  font-family: @garamond;
 }

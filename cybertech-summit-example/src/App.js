@@ -1,18 +1,40 @@
-import React from "react";
-import Introduction from "./components/Introduction";
-// import EmailExample from "./components/EmailExample";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-// import homePage1 from "./assets/homePage1.jpg";
-// import homeVid from "./assets/homeVid1.mp4";
+import React, { lazy, Suspense } from "react";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
+const Introduction = lazy(() => import("./components/Introduction"));
+const EmailExample = lazy(() => import("./components/EmailExample"));
+const NavBar = lazy(() => import("./components/NavBar"));
+const Footer = lazy(() => import("./components/Footer"));
+const EmailSample1 = lazy(() =>
+  import("./components/emailSamples/EmailSample1")
+);
+const EmailSample2 = lazy(() =>
+  import("./components/emailSamples/EmailSample2")
+);
+const EmailSample3 = lazy(() =>
+  import("./components/emailSamples/EmailSample3")
+);
+const EmailSample4 = lazy(() =>
+  import("./components/emailSamples/EmailSample4")
+);
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Introduction />
       {/* <EmailExample /> */}
-      <Footer />
+      <Suspense fallback={<p>Loading</p>}>
+        <NavBar />
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<Introduction />} />
+            <Route path="/email-samples" element={<EmailExample />} />
+            <Route path="/email-sample-one" element={<EmailSample1 />} />
+            <Route path="/email-sample-two" element={<EmailSample2 />} />
+            <Route path="/email-sample-three" element={<EmailSample3 />} />
+            <Route path="/email-sample-four" element={<EmailSample4 />} />
+          </Routes>
+        </Router>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
