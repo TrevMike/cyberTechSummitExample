@@ -179,6 +179,7 @@ h1 {
   font-family: "Questrial", sans-serif;
 }
 h3 {
+  font-size: 1.6rem;
   font-family: "Arapey", serif;
 }
 div,
@@ -188,14 +189,11 @@ input {
   font-size: 1.1rem;
   font-family: "Questrial", sans-serif;
 }
+p {
+  padding: 10px 0px;
+}
 a {
   font-size: 0.9rem;
-}
-.bodoni {
-  font-family: "Arapey", serif;
-}
-.garamond {
-  font-family: "Cormorant Garamond", serif;
 }
 .navBar {
   width: 100%;
@@ -219,12 +217,23 @@ a {
 }
 .introduction {
   background: #040b0d;
-  width: 50%;
   height: auto;
   font-family: "Questrial", sans-serif;
   background: #9c3d2e;
   border-radius: 8px;
-  padding: 20px 0px;
+  padding: 50px 4%;
+}
+.introduction header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introduction header ul {
+  list-style-type: square;
+}
+.introduction header ul li {
+  padding: 5px 0px;
 }
 .emailExample1 {
   width: 60%;
@@ -234,9 +243,6 @@ a {
   border-bottom: solid #0fa3b1 2px;
   padding: 10px 0px;
   margin-bottom: 20px;
-}
-.emailExample1 p {
-  padding: 10px 0px;
 }
 .emailExample1 a {
   font-size: 1.1rem;
@@ -255,9 +261,6 @@ a {
   padding: 10px 0px;
   margin-bottom: 20px;
 }
-.emailExample2 p {
-  padding: 10px 0px;
-}
 .emailExample2 p span {
   color: #0fa3b1;
 }
@@ -269,9 +272,6 @@ a {
   border-bottom: solid #0fa3b1 2px;
   padding: 10px 0px;
   margin-bottom: 20px;
-}
-.emailExample3 p {
-  padding: 10px 0px;
 }
 .emailExample3 a {
   font-size: 1.1rem;
@@ -297,6 +297,103 @@ a {
   padding: 10px 0px;
   margin-bottom: 20px;
 }
-.emailExample4 p {
-  padding: 10px 0px;
+.emailExample4 .modalSampleBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.emailExample4 .modalSampleBtn button {
+  width: 20%;
+  border: none;
+  outline: none;
+  background: #0fa3b1;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  font-weight: 900;
+}
+.emailSample4Modal {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  background: rgba(4, 11, 13, 0.9);
+}
+.emailSample4Modal .formContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  height: 100vh;
+}
+.emailSample4Modal .inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+}
+.emailSample4Modal .inputContainer .inputHolders {
+  width: 48%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.emailSample4Modal .inputContainer .inputHolders span {
+  padding: 0px 5px;
+}
+.emailSample4Modal .inputContainer .inputHolders input {
+  width: 75%;
+  background: #040b0d;
+  border: none;
+  border-bottom: solid #0b3142 2px;
+  outline: none;
+}
+.emailSample4Modal .exit {
+  display: flex;
+  justify-content: flex-end;
+}
+.emailSample4Modal .exit span {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.emailSample4Modal .exit span:hover {
+  color: #0fa3b1;
+}
+.emailSample4Modal .btmForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.emailSample4Modal .btmForm textarea {
+  width: 95%;
+  outline: none;
+  border-radius: 8px;
+  color: #eff2d9;
+  padding: 10px;
+  background: #0b3142;
+  border: solid #0fa3b1 1px;
+  font-size: 1.1rem;
+  font-family: Helvetica, sans-serif;
+}
+.emailSample4Modal .btmForm button {
+  color: #eff2d9;
+  font-weight: 900;
+  margin: 20px 0px;
+  padding: 10px 40px;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  background: #0fa3b1;
+  cursor: pointer;
+}
+.emailSample4Modal .btmForm button:hover {
+  color: #eff2d9;
+  background: #9c3d2e;
 }

@@ -22,8 +22,8 @@ function App() {
     <div className="App">
       {/* <EmailExample /> */}
       <Suspense fallback={<p>Loading</p>}>
-        <NavBar />
         <Router>
+          <NavBar />
           <Routes>
             <Route exact path="/" element={<Introduction />} />
             <Route path="/email-samples" element={<EmailExample />} />
@@ -32,8 +32,8 @@ function App() {
             <Route path="/email-sample-three" element={<EmailSample3 />} />
             <Route path="/email-sample-four" element={<EmailSample4 />} />
           </Routes>
+          <Footer />
         </Router>
-        <Footer />
       </Suspense>
     </div>
   );

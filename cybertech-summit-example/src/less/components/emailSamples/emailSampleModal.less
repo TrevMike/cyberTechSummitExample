@@ -1,0 +1,87 @@
+.emailSample4Modal {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  background: rgba(4, 11, 13, 90%);
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+    // background-color: pink;
+  }
+  .inputContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    .inputHolders {
+      width: 48%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      span {
+        // width: 25%;
+        padding: 0px 5px;
+      } // span
+      input {
+        width: 75%;
+        background: @dominateColor;
+        border: none;
+        border-bottom: solid @accent2 2px;
+        outline: none;
+      } // input
+    } // inputHolders
+  } // inputContainers
+  .exit {
+    display: flex;
+    justify-content: flex-end;
+    span {
+      //   background: pink;
+      padding: 5px 10px;
+      cursor: pointer;
+      &:hover {
+        color: @accent1;
+      }
+      //   background: transparent;
+    }
+  }
+  .btmForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    textarea {
+      width: 95%;
+      outline: none;
+      border-radius: 8px;
+      color: @white;
+      padding: 10px;
+      background: @accent2;
+      border: solid @accent1 1px;
+      font-size: @RegularSize;
+      font-family: @helvetica;
+    }
+    button {
+      color: @white;
+      font-weight: 900;
+      margin: 20px 0px;
+      padding: 10px 40px;
+      outline: none;
+      border-radius: 8px;
+      border: none;
+      background: @accent1;
+      cursor: pointer;
+      &:hover {
+        color: @white;
+        background: @mainColor;
+      }
+    }
+  }
+} // emailSample4Modal

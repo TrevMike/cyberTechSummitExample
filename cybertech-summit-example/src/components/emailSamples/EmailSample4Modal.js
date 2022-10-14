@@ -1,21 +1,34 @@
 import React from "react";
 
-function EmailSample4Modal() {
+function EmailSample4Modal(props) {
+  const { setPopup } = props;
   return (
-    <div>
+    <div className="emailSample4Modal">
       <div className="formContainer">
-        <button>Close</button>
+        {/* <button>Close</button> */}
+        <div className="exit" onClick={() => setPopup(false)}>
+          <span>x</span>
+        </div>
+
         <form action="">
-          <div>
-            <span>Full Name: </span>
-            <input type="text" value={``} placeholder={`Full Name...`} />
+          <div className="inputContainer">
+            <div className="inputHolders">
+              <span>Full Name: </span>
+              <input type="text" value={``} placeholder={`Full Name...`} />
+            </div>
+            <div className="inputHolders">
+              <span>Email: </span>
+              <input
+                type="text"
+                value={``}
+                placeholder={"example@example.com"}
+              />
+            </div>
           </div>
-          <div>
-            <span>Email: </span>
-            <input type="text" value={``} placeholder={"example@example.com"} />
-          </div>
-          <div>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+          <div className="btmForm">
+            <textarea name="" id="" rows={12}></textarea>
+            <button>Submit</button>
           </div>
         </form>
       </div>
