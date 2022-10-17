@@ -1,9 +1,50 @@
-import React, { useState } from "react";
-import EmailSample4Modal from "./EmailSample4Modal";
-
+import React, { useState, lazy, Suspense } from "react";
+// import EmailSample4Modal from "./EmailSample4Modal";
+const EmailSample4Modal = lazy(() => import("./EmailSample4Modal"));
+const SampleVid41 = lazy(() => import("../images/SampleVid41"));
+const SampleVid42 = lazy(() => import("../images/SampleVid42"));
 function EmailSample4() {
   const [popup, setPopup] = useState(false);
   const [cssPopup, setCssPopup] = useState(false);
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    textArea: "",
+  });
+  function formHandler(e) {
+    e.preventDefault();
+
+    if (
+      input.name.length <= 0 ||
+      input.email.length <= 0 ||
+      input.textArea.length <= 0
+    ) {
+      alert(`Please fill in all fields before submittion. Thank you!`);
+
+      return;
+    }
+    if (input.email.length > 2) {
+      if (!input.email.includes("@") || !input.email.includes(".")) {
+        alert(`Please submit a proper email. Thank you!`);
+        return;
+      }
+    }
+    if (input.textArea.length > 255) {
+      alert(
+        `Form unable to submit, error on textarea character limit: 255. please use less characters.`
+      );
+      return;
+    }
+    alert(
+      `Subject: ${input.name} sent you a message\n\nreply to Email: ${input.email}\n\nContent: ${input.textArea}`
+    );
+    setInput({
+      name: "",
+      email: "",
+      textArea: "",
+    });
+    setCssPopup(false);
+  }
   return (
     <div className="emailExample4">
       <h3>Email Sample 4</h3>
@@ -16,7 +57,13 @@ function EmailSample4() {
         inputs and inputing legit data.
       </p>
 
-      {popup ? <EmailSample4Modal setPopup={setPopup} /> : ""}
+      {popup ? (
+        <Suspense fallback={<div>Loading...</div>}>
+          <EmailSample4Modal setPopup={setPopup} />
+        </Suspense>
+      ) : (
+        ""
+      )}
 
       <div
         className="emailSample4Modal"
@@ -28,25 +75,44 @@ function EmailSample4() {
             <span>x</span>
           </div>
 
-          <form action="">
+          <form onSubmit={e => formHandler(e)}>
             <div className="inputContainer">
               <div className="inputHolders">
                 <span>Full Name: </span>
-                <input type="text" value={``} placeholder={`Full Name...`} />
+                <input
+                  type="text"
+                  value={input.name}
+                  placeholder={`Full Name...`}
+                  onChange={e => {
+                    setInput({ ...input, name: e.target.value });
+                  }}
+                />
               </div>
               <div className="inputHolders">
                 <span>Email: </span>
                 <input
                   type="text"
-                  value={``}
+                  value={input.email}
                   placeholder={"example@example.com"}
+                  onChange={e => {
+                    setInput({ ...input, email: e.target.value });
+                  }}
                 />
               </div>
             </div>
 
             <div className="btmForm">
-              <textarea name="" id="" rows={12}></textarea>
-              <button>Submit</button>
+              <textarea
+                name="emailContent"
+                id="emailContent"
+                rows={12}
+                maxLength={255}
+                value={input.textArea}
+                onChange={e => {
+                  setInput({ ...input, textArea: e.target.value });
+                }}
+              ></textarea>
+              <button onClick={e => formHandler(e)}>Submit</button>
             </div>
           </form>
         </div>
@@ -61,6 +127,9 @@ function EmailSample4() {
           the AI will fill in the inputs and send the data to you
         </p>
         <button onClick={() => setCssPopup(!cssPopup)}>Open CSS Version</button>
+        <Suspense fallback={<div>Loading...</div>}>
+          <SampleVid41 />
+        </Suspense>
         <p>
           The JavaScript we are setting a conditional toggle, and logic goes as
           such; set a variable popup=true and an onclick handler when invoked
@@ -69,6 +138,9 @@ function EmailSample4() {
           the form a.k.a the clean up step.
         </p>
         <button onClick={() => setPopup(!popup)}>Open JavaScipt Version</button>
+        <Suspense fallback={<div>Loading...</div>}>
+          <SampleVid42 />
+        </Suspense>
       </div>
     </div>
   );

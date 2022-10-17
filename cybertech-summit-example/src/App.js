@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       {/* <EmailExample /> */}
-      <Suspense fallback={<p>Loading</p>}>
+      <Suspense fallback={<p>Loading...</p>}>
         <Router>
           <NavBar />
           <Routes>
