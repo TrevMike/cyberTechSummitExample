@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import ReCAPTCHA from "react-google-recaptcha";
 function EmailSample4Modal(props) {
   const { setPopup } = props;
   const [input, setInput] = useState({
@@ -85,6 +85,10 @@ function EmailSample4Modal(props) {
                 setInput({ ...input, textArea: e.target.value });
               }}
             ></textarea>
+            <ReCAPTCHA
+              sitekey="6LdjFosiAAAAAE7mZCxvC3a8SgrbiuBitpdjqxrR"
+              onChange={value => console.log("popped off", value)}
+            />
             <button onClick={e => formHandler(e)}>Submit</button>
           </div>
         </form>
