@@ -319,9 +319,18 @@ a {
 .emailExample3 a:hover {
   color: #0fa3b1;
 }
+.emailExample3 .reveal {
+  display: none;
+}
 @media (max-width: 500px) {
   .emailExample3 {
     width: 90%;
+  }
+  .emailExample3 .reveal {
+    display: block;
+  }
+  .hide {
+    display: none;
   }
 }
 .emailExample4 {
