@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "emailSummitExample",
+  "name": "Cyber Tech Summit Example",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,17 +8,17 @@
       "type": "image/x-icon"
     },
     {
-      "src": "mikeAndKamesLogo192.png",
+      "src": "mikeAndJamesLogo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "mikeAndKamesLogo512.png",
+      "src": "mikeAndJamesLogo192.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
