@@ -2,12 +2,12 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="Footer">
+    <footer>
       <p>
         Presented by: <span>Michael C. Trevino</span> {"&"}
         <span> James Francis-Love</span>
       </p>
-    </div>
+    </footer>
   );
 }
 

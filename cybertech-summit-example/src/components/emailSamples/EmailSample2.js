@@ -1,5 +1,4 @@
 import React, { lazy, Suspense } from "react";
-// import htmlSample2 from "../../assets/HTMLSample2.png";
 const EmailImage = lazy(() => import("../images/EmailImage"));
 const SampleImg2 = lazy(() => import("../images/SampleImg2"));
 function EmailSample2() {
@@ -15,7 +14,7 @@ function EmailSample2() {
       <p>
         all image elements require 2 attributes, the source{" "}
         <span>{`src={"url or file path"}`}</span> and the alternative text{" "}
-        <span>{`alt={"short description of what the image for users that are for any reason unable to view it"}`}</span>
+        <span>{`alt={"short description of what the image is for users that are for any reason unable to view it"}`}</span>
       </p>
       <Suspense fallback={<div>Loading img one...</div>}>
         <EmailImage />
@@ -23,9 +22,6 @@ function EmailSample2() {
       <Suspense fallback={<div>Loading img two...</div>}>
         <SampleImg2 />
       </Suspense>
-
-      {/* <img src={emailPicture} alt="email address of user" /> */}
-      {/* <img className="htmlSample" src={htmlSample2} alt="html example" /> */}
     </div>
   );
 }

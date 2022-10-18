@@ -86,3 +86,34 @@
     }
   }
 } // emailSample4Modal
+
+@media (max-width: 500px) {
+  .emailSample4Modal {
+    background: rgba(4, 11, 13, 97%);
+    .formContainer {
+      width: 90%;
+      .exit {
+        span {
+          font-size: 2rem;
+        }
+      }
+      .inputContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .inputHolders {
+          width: 100%;
+          margin: 10px 0px;
+          input {
+            width: 60%;
+          } // input
+        } // inputholders
+      } // inputcontainer
+      button {
+        width: 100%;
+      } // button
+    } // form container
+  } // emailsamplemodal
+} // media query 500px

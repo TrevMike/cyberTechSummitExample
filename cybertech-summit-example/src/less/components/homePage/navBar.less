@@ -19,5 +19,25 @@
       cursor: pointer;
       padding: 5px 0px;
     } // span
+    img {
+      display: none;
+    }
   } // nav
+  @media (max-width: 500px) {
+    nav {
+      align-items: flex-end;
+      span {
+        text-align: left;
+        width: 90%;
+      }
+      img {
+        width: 15%;
+        display: block;
+      }
+    }
+
+    .menu-items {
+      display: none;
+    }
+  }
 } // navbar

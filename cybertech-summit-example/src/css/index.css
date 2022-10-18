@@ -216,6 +216,25 @@ a {
   cursor: pointer;
   padding: 5px 0px;
 }
+.navBar nav img {
+  display: none;
+}
+@media (max-width: 500px) {
+  .navBar nav {
+    align-items: flex-end;
+  }
+  .navBar nav span {
+    text-align: left;
+    width: 90%;
+  }
+  .navBar nav img {
+    width: 15%;
+    display: block;
+  }
+  .navBar .menu-items {
+    display: none;
+  }
+}
 .introduction {
   background: #040b0d;
   width: 50%;
@@ -254,6 +273,11 @@ a {
 .emailExample1 a:hover {
   color: #0fa3b1;
 }
+@media (max-width: 500px) {
+  .emailExample1 {
+    width: 90%;
+  }
+}
 .emailExample2 {
   width: 75%;
 }
@@ -265,6 +289,11 @@ a {
 }
 .emailExample2 p span {
   color: #0fa3b1;
+}
+@media (max-width: 500px) {
+  .emailExample2 {
+    width: 90%;
+  }
 }
 .emailExample3 {
   width: 75%;
@@ -289,6 +318,11 @@ a {
 }
 .emailExample3 a:hover {
   color: #0fa3b1;
+}
+@media (max-width: 500px) {
+  .emailExample3 {
+    width: 90%;
+  }
 }
 .emailExample4 {
   width: 75%;
@@ -315,6 +349,15 @@ a {
   margin: 10px 0px;
   border-radius: 8px;
   font-weight: 900;
+}
+@media (max-width: 500px) {
+  .emailExample4 {
+    width: 90%;
+  }
+  .emailExample4 .modalSampleBtn button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 .emailSample4Modal {
   height: 100vh;
@@ -399,4 +442,44 @@ a {
 .emailSample4Modal .btmForm button:hover {
   color: #eff2d9;
   background: #9c3d2e;
+}
+@media (max-width: 500px) {
+  .emailSample4Modal {
+    background: rgba(4, 11, 13, 0.97);
+  }
+  .emailSample4Modal .formContainer {
+    width: 90%;
+  }
+  .emailSample4Modal .formContainer .exit span {
+    font-size: 2rem;
+  }
+  .emailSample4Modal .formContainer .inputContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .emailSample4Modal .formContainer .inputContainer .inputHolders {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .emailSample4Modal .formContainer .inputContainer .inputHolders input {
+    width: 60%;
+  }
+  .emailSample4Modal .formContainer button {
+    width: 100%;
+  }
+}
+footer {
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 80%;
+  }
+  footer p,
+  footer span {
+    font-size: 0.7rem;
+  }
 }
