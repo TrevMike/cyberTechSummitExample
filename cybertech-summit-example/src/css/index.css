@@ -203,7 +203,7 @@ a {
   padding: 20px 0px;
 }
 .navBar nav {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -211,13 +211,14 @@ a {
   border-bottom: solid #0b3142 2px;
 }
 .navBar nav span {
-  width: 10%;
+  width: 19%;
   text-align: center;
   cursor: pointer;
   padding: 5px 0px;
 }
 .introduction {
   background: #040b0d;
+  width: 50%;
   height: auto;
   font-family: "Questrial", sans-serif;
   background: #9c3d2e;
@@ -237,7 +238,7 @@ a {
   padding: 5px 0px;
 }
 .emailExample1 {
-  width: 60%;
+  width: 75%;
 }
 .emailExample1 h3 {
   font-size: 2.4rem;
@@ -254,7 +255,7 @@ a {
   color: #0fa3b1;
 }
 .emailExample2 {
-  width: 60%;
+  width: 75%;
 }
 .emailExample2 h3 {
   font-size: 2.4rem;
@@ -266,7 +267,7 @@ a {
   color: #0fa3b1;
 }
 .emailExample3 {
-  width: 60%;
+  width: 75%;
 }
 .emailExample3 h3 {
   font-size: 2.4rem;
@@ -290,7 +291,7 @@ a {
   color: #0fa3b1;
 }
 .emailExample4 {
-  width: 60%;
+  width: 75%;
 }
 .emailExample4 h3 {
   font-size: 2.4rem;
@@ -382,6 +383,7 @@ a {
   border: solid #0fa3b1 1px;
   font-size: 1.1rem;
   font-family: Helvetica, sans-serif;
+  margin-bottom: 20px;
 }
 .emailSample4Modal .btmForm button {
   color: #eff2d9;

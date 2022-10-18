@@ -7,6 +7,9 @@ function EmailSample4Modal(props) {
     email: "",
     textArea: "",
   });
+  function captchaHandler(value) {
+    console.log("Captcha value:", value);
+  }
   function formHandler(e) {
     e.preventDefault();
     if (
@@ -86,8 +89,8 @@ function EmailSample4Modal(props) {
               }}
             ></textarea>
             <ReCAPTCHA
-              sitekey="6LdjFosiAAAAAE7mZCxvC3a8SgrbiuBitpdjqxrR"
-              onChange={value => console.log("popped off", value)}
+              sitekey={"6LdjFosiAAAAAE7mZCxvC3a8SgrbiuBitpdjqxrR"}
+              onChange={captchaHandler}
             />
             <button onClick={e => formHandler(e)}>Submit</button>
           </div>

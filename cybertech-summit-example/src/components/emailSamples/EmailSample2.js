@@ -14,8 +14,8 @@ function EmailSample2() {
       </p>
       <p>
         all image elements require 2 attributes, the source{" "}
-        <span>{`( src="url or file path" )`}</span> and the alternative text{" "}
-        <span>{`( alt="short description of what the image for users that are for any reason unable to view it" )`}</span>
+        <span>{`src={"url or file path"}`}</span> and the alternative text{" "}
+        <span>{`alt={"short description of what the image for users that are for any reason unable to view it"}`}</span>
       </p>
       <Suspense fallback={<div>Loading img one...</div>}>
         <EmailImage />

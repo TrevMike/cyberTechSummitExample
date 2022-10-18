@@ -14,7 +14,7 @@ function Introduction() {
         <h3>6th Annual Region One Cybersecurity Summit</h3>
         <p>- Topics we will be covering -</p>
         <ul>
-          <li>The history of HTML for links and how it have evolved.</li>
+          <li>The history of HTML for links and how it has evolved.</li>
           <li>
             The different methods of setting up emails along with PROS and CONS.
           </li>

@@ -13,7 +13,8 @@ function EmailSample1() {
       <span>{`<-`} Click Me!</span>
       <p>
         Below shows the HTML written to make this email link. As you can see
-        this is exposing the address and makes it easy for expliotation
+        this is exposing the address and makes it easy for exploitation via
+        email harvesting.
       </p>
       <div>
         {/* <p>html example to show how exposed this way of writing code is.</p> */}

@@ -17,6 +17,7 @@ const EmailSample3 = lazy(() =>
 const EmailSample4 = lazy(() =>
   import("./components/emailSamples/EmailSample4")
 );
+const ErrorPage = lazy(() => import("./components/ErrorPage"));
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,7 @@ function App() {
             <Route path="/email-sample-two" element={<EmailSample2 />} />
             <Route path="/email-sample-three" element={<EmailSample3 />} />
             <Route path="/email-sample-four" element={<EmailSample4 />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
           <Footer />
         </Router>

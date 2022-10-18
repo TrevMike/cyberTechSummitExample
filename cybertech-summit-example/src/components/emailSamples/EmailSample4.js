@@ -1,4 +1,5 @@
 import React, { useState, lazy, Suspense } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 // import EmailSample4Modal from "./EmailSample4Modal";
 const EmailSample4Modal = lazy(() => import("./EmailSample4Modal"));
 const SampleVid41 = lazy(() => import("../images/SampleVid41"));
@@ -11,6 +12,9 @@ function EmailSample4() {
     email: "",
     textArea: "",
   });
+  function captchaHandler(value) {
+    console.log("Captcha value:", value);
+  }
   function formHandler(e) {
     e.preventDefault();
 
@@ -112,6 +116,10 @@ function EmailSample4() {
                   setInput({ ...input, textArea: e.target.value });
                 }}
               ></textarea>
+              <ReCAPTCHA
+                sitekey={"6LdjFosiAAAAAE7mZCxvC3a8SgrbiuBitpdjqxrR"}
+                onChange={captchaHandler}
+              />
               <button onClick={e => formHandler(e)}>Submit</button>
             </div>
           </form>
