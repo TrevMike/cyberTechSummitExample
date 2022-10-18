@@ -346,7 +346,7 @@ a {
   outline: none;
   background: #0fa3b1;
   padding: 10px 20px;
-  margin: 10px 0px;
+  margin: 20px 0px;
   border-radius: 8px;
   font-weight: 900;
 }
@@ -473,6 +473,7 @@ a {
 footer {
   width: 100%;
   text-align: center;
+  padding: 20px 0px;
 }
 @media (max-width: 500px) {
   footer {
