@@ -7,14 +7,15 @@ function EmailSample1() {
       <h3>Email Example 1</h3>
       <p>
         Here is the most basic email set up and unfortunately the most common
-        one online making it the easiest to exploit.
+        one online, making it the easiest to exploit.
       </p>
       <a href="mailto:example@example.com">example@example.com</a>{" "}
       <span>{`<-`} Click Me!</span>
       <p>
-        Below shows the HTML written to make this email link. As you can see
-        this is exposing the address and makes it easy for exploitation via
-        email harvesting.
+        Below shows the HTML written to make this email link. We want to hide
+        all of our personal info away from the main site as much as we can. As
+        you can see, this is exposing the email address and makes it easy for
+        exploitation via email harvesting.
       </p>
       <div>
         {/* <p>html example to show how exposed this way of writing code is.</p> */}

@@ -23,7 +23,7 @@ function EmailSample4() {
       input.email.length <= 0 ||
       input.textArea.length <= 0
     ) {
-      alert(`Please fill in all fields before submittion. Thank you!`);
+      alert(`Please fill in all fields before submission. Thank you!`);
 
       return;
     }
@@ -35,7 +35,7 @@ function EmailSample4() {
     }
     if (input.textArea.length > 255) {
       alert(
-        `Form unable to submit, error on textarea character limit: 255. please use less characters.`
+        `Form unable to submit, error on textarea character limit: 255. Please use less characters.`
       );
       return;
     }
@@ -55,10 +55,10 @@ function EmailSample4() {
       <p>
         Here we have two versions of the same example, the first is trying to do
         it via CSS which is not the way we want to do it, and the other is doing
-        it via JavaScript which is the way we are waning to make it. Regarless
-        of whatever version you are using always try to impletement Captcha,
-        this is one of the best ways to prevent from bots attacking your site
-        inputs and inputing legit data.
+        it via JavaScript, which is the way we are waning to make it. Regardless
+        of whatever version you are using, always try to implement Captcha, this
+        is one of the best ways to prevent bots attacking your website's inputs
+        and inputting malicious data.
       </p>
 
       {popup ? (
@@ -127,23 +127,28 @@ function EmailSample4() {
       </div>
       <div className="modalSampleBtn">
         <p>
-          The two version are exactly the same minus the way we are toggling the
-          display in one and rendering the other. The CSS version we are simply
-          toggling the CSS attribute "display" from "none" to in this case
-          "flex". The reason we don't want to make it via CSS is because the
-          HTML will still show in inpector tool and we can still get scrapped,
-          the AI will fill in the inputs and send the data to you
+          The two version are exactly the same, minus the way we are toggling
+          the display in one, and rendering the other. The CSS version we are
+          simply toggling the CSS attribute "display" from "none" to in this
+          case "flex". The reason we don't want to make it via CSS is because
+          the HTML will still show in the inspector tool, and we can still get
+          scrapped, the AI will fill in the inputs and send the data to you. In
+          simple terms, we are "Hiding" the form, yet it is still exposed in our
+          HTML.
         </p>
         <button onClick={() => setCssPopup(!cssPopup)}>Open CSS Version</button>
         <Suspense fallback={<div>Loading...</div>}>
           <SampleVid41 />
         </Suspense>
         <p>
-          The JavaScript we are setting a conditional toggle, and logic goes as
-          such; set a variable popup=true and an onclick handler when invoked
-          set to !popup which would in turn set to popup=false. The Component
-          will get mounted into the DOM when rendered and unmount when done with
-          the form a.k.a the clean up step.
+          The JavaScript version we are setting a conditional to toggle, and
+          logic goes as such; set a variable popup=true and an on click handler
+          when invoked set to !popup which would in turn set our variable to
+          popup=false. The Component will get mounted into the DOM when rendered
+          and unmount when done with the form, a.k.a. the cleanup step. In
+          simple terms, our form won't show in our HTML unless you call for it
+          which it will then populate and when we are done with it leave the
+          HTML.
         </p>
         <button onClick={() => setPopup(!popup)}>Open JavaScipt Version</button>
         <Suspense fallback={<div>Loading...</div>}>

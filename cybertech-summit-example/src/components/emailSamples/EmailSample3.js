@@ -7,18 +7,20 @@ function EmailSample3() {
     <div className="emailExample3">
       <h3>Email Example 3</h3>
       <p>
-        Here is another example using Javascript to send the email and prevent
-        scrapping though this may fail if the user has disabled javascipt making
-        the feature useless, another issue would be user experience having to
-        open a client on there computer instead of being able to use there own
-        email service.
+        Here is an example using JavaScript to send the email to prevent
+        scrapping. The issue here is again accessibility, we are using a Hover
+        event on and off to either hide or show the email, but won't work when
+        we try to go on mobile side of things due to the reason we can't hover
+        over our phones and just like example 1 and 2 when we have the client
+        click on the link it will still open the email app on their local
+        machine.
       </p>
       <p>
         Also ask yourself? How do hover events work on mobile? You can't hover
         your finger expecting it to behave the same way? let's see what happens
         on mobile?
       </p>
-      <p className="reveal">This example fails in accessibilty</p>
+      <p className="reveal">This example fails in accessibility.</p>
       <a
         className="reveal"
         href={emailEvent ? emailAddress : "#."}
