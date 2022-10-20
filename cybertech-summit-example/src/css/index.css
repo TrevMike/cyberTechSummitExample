@@ -221,18 +221,12 @@ a {
 }
 @media (max-width: 500px) {
   .navBar nav {
-    align-items: flex-end;
+    align-items: flex-start;
   }
   .navBar nav span {
-    text-align: left;
-    width: 90%;
-  }
-  .navBar nav img {
-    width: 15%;
-    display: block;
-  }
-  .navBar .menu-items {
-    display: none;
+    border-top: solid #0fa3b1 1px;
+    font-size: 0.7rem;
+    width: 18%;
   }
 }
 .introduction {
@@ -255,6 +249,17 @@ a {
 }
 .introduction header ul li {
   padding: 5px 0px;
+}
+@media (max-width: 500px) {
+  .introduction {
+    width: 90%;
+  }
+  .introduction h3 {
+    text-align: center;
+  }
+  .introduction ul {
+    width: 95%;
+  }
 }
 .emailExample1 {
   width: 75%;

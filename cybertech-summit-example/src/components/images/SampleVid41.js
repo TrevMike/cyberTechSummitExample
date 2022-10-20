@@ -3,7 +3,12 @@ import video from "../../assets/CSSModal.mov";
 function SampleVid41() {
   return (
     <Fragment>
-      <video style={{ width: "100%" }} src={video} autoPlay loop={true} />
+      <video
+        style={{ width: "100%", marginBottom: "20px" }}
+        src={video}
+        autoPlay
+        loop={true}
+      />
     </Fragment>
   );
 }

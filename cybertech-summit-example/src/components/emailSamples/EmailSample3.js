@@ -15,11 +15,7 @@ function EmailSample3() {
         click on the link it will still open the email app on their local
         machine.
       </p>
-      <p>
-        Also ask yourself? How do hover events work on mobile? You can't hover
-        your finger expecting it to behave the same way? let's see what happens
-        on mobile?
-      </p>
+
       <p className="reveal">This example fails in accessibility.</p>
       <a
         className="reveal"

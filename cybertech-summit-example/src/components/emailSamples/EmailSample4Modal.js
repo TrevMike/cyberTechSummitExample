@@ -46,7 +46,6 @@ function EmailSample4Modal(props) {
   return (
     <div className="emailSample4Modal Javascript Modal">
       <div className="formContainer">
-        {/* <button>Close</button> */}
         <div className="exit" onClick={() => setPopup(false)}>
           <span>x</span>
         </div>
